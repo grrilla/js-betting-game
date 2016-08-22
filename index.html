@@ -4,12 +4,42 @@
 <head>
   <title>JS Betting Game</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src=""></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="application.js"></script>
-
 </head>
 <body>
-
+  <h1>Betting Game</h1>
+  <hr/>
+  <h3>The Rules:</h3>
+  <ul>
+    <li>You must guess a number between 1 and 10 inclusive</li>
+    <li>You can bet either 5 or 10 chips</li>
+    <li>If you guess correctly, you win your bet</li>
+    <li>If you are +/- 1 of the correct value, you break even</li>
+    <li>If you are wrong, you lose your bet</li>
+  </ul>
+  <h3>Good luck!</h3>
+  <hr/>
+  <h4>Bankroll: <span id="bankroll">100</span> chips</h4>
+  <label><strong>Bet:</strong></label><br/>
+  <input type="radio" name="bet" id="bet-5" value="5" checked>5 chips<br/>
+  <input type="radio" name="bet" id="bet-10" value="10">10 chips<br/>
+  <br/>
+  <label><strong>Pick a Number:</strong></label>
+  <select id="guess">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select><br/><br/>
+  <button id="submit">Let's go!</button><br/><br/>
+  <label><strong>Output:</strong></label> <span id="output"></span>
 </body>
 
 </html>
